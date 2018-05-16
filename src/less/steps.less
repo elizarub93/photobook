@@ -1,0 +1,62 @@
+@import 'partials/params';
+@import 'partials/mixins';
+
+@b-rad: 5px;
+@font-size: 13px;
+
+#steps{
+	text-align: center;
+	padding: 50px 0;
+
+	& .tiles{
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 40px;
+
+		& .tile{
+			display: flex;
+			flex-direction: column;
+			width: 28%;
+			& .header{
+				background-color: @primary-color;
+				text-align: center;
+				margin-bottom: 5px;
+				letter-spacing: 2px;
+				font-size: 18px;
+				padding: 10px;
+				font-weight: bold;
+				border-radius: @b-rad @b-rad 0 0;
+
+			}
+			& .content{
+				text-align: left;
+				flex-grow: 1;
+				padding: 20px;
+				margin-bottom: 5px;
+				border-radius: 0 0 @b-rad @b-rad ;
+				background-color: @light-color;
+				& p{
+					font-size: @font-size;
+					margin-bottom: 5px;
+				}
+				& ul{
+					.clean();
+					padding: 0 0 30px;
+					font-size: @font-size;
+					& li{
+						line-height: 2;
+					}
+				}
+				& p.red{
+					color: @red-color;
+				}
+			}
+
+		}
+	}
+
+	& .btn{
+
+	}
+
+}
